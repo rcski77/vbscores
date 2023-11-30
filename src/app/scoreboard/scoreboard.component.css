@@ -1,0 +1,41 @@
+.scoreboard {
+    margin: 0 0 2em 0;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.scoretable {
+    margin: 0 0 2em 0;
+    padding: 3px;
+    width: 300px;
+    height: 75px;
+    font-weight: bold;
+}
+
+.scorerow {
+    height: 50px;
+}
+
+.teamname {
+    background-color: azure;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.score {
+    background-color: gold;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+    font-size: 14pt;
+}
+
+.sets {
+    background-color: gold;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+    font-size: 14pt;
+}

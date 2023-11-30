@@ -1,5 +1,5 @@
-<h2>Court: {{court.courtNum}}</h2>
-<div>
-    <div><span>{{court.team1}} - {{court.score1}}</span></div>
-    <div><span>{{court.team2}} - {{court.score2}}</span></div>
+<h2>Score Entry</h2>
+
+<div *ngFor="let court of courts">
+    <app-scoreboard [court]="court"></app-scoreboard>
 </div>
