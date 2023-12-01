@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { ScoreboardComponent } from '../scoreboard/scoreboard.component';
-import { Court, COURTS } from '../court';
+import { Court } from '../court';
+import { CourtService } from '../court.service';
 
 @Component({
   standalone: true,
@@ -12,5 +13,16 @@ import { Court, COURTS } from '../court';
 })
 
 export class ScoreEntryComponent {
-  courts = COURTS;
+  courts: Court[] = [];
+
+  constructor(private courtService: CourtService) {}
+
+  ngOnInit(): void {
+    this.getCourts();
+  }
+
+  getCourts(): void {
+    this.courtService.getCourts()
+      .subscribe(courts => this.courts = courts);
+  }
 }
