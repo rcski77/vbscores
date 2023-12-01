@@ -13,4 +13,9 @@ export class CourtService {
     const courts = of(COURTS);
     return courts;
   }
+
+  getCourt(id: string): Observable<Court> {
+    const court = COURTS.find(c => c.id === id)!;
+    return of(court);
+  }
 }
