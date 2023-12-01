@@ -1,18 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { ScoreboardComponent } from '../scoreboard/scoreboard.component';
 import { Court } from '../court';
+import { CourtService } from '../court.service';
 
 @Component({
+  standalone: true,
   selector: 'app-score-entry',
   templateUrl: './score-entry.component.html',
-  styleUrls: ['./score-entry.component.css']
+  styleUrls: ['./score-entry.component.css'],
+  imports: [NgFor, ScoreboardComponent],
 })
+
 export class ScoreEntryComponent {
-  court: Court = {
-    courtNum: BigInt(1),
-    team1: "Gamepoint 13",
-    team2: "TPV 13",
-    score1: BigInt(25),
-    score2: BigInt(12),
+  courts: Court[] = [];
+
+  constructor(private courtService: CourtService) {}
+
+  ngOnInit(): void {
+    this.getCourts();
   }
 
+  getCourts(): void {
+    this.courtService.getCourts()
+      .subscribe(courts => this.courts = courts);
+  }
 }

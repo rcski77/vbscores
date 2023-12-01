@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ScoreEntryComponent } from './score-entry/score-entry.component';
+import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ScoreEntryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScoreEntryComponent,
+    ScoreboardComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
