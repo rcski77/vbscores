@@ -1,5 +1,9 @@
-<h2>Score Entry</h2>
+<h2>Live Scores</h2>
 
 <div *ngFor="let court of courts">
-    <app-scoreboard [court]="court"></app-scoreboard>
+    <div class="bounce">
+        <a routerLink="/court/{{court.id}}">
+            <app-scoreboard [court]="court"></app-scoreboard>
+        </a>
+    </div>
 </div>

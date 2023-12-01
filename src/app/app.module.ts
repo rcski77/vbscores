@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { ScoreEntryComponent } from './score-entry/score-entry.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
+import { EditScoresComponent } from './edit-scores/edit-scores.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    EditScoresComponent,
+    ScoreEntryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScoreEntryComponent,
     ScoreboardComponent,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
