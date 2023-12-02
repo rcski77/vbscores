@@ -8,6 +8,10 @@ import { ScoreEntryComponent } from './score-entry/score-entry.component';
 import { ScoreboardComponent } from './scoreboard/scoreboard.component';
 import { EditScoresComponent } from './edit-scores/edit-scores.component';
 
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,8 @@ import { EditScoresComponent } from './edit-scores/edit-scores.component';
     AppRoutingModule,
     ScoreboardComponent,
     MatIconModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

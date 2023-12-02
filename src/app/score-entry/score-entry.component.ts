@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { ScoreboardComponent } from '../scoreboard/scoreboard.component';
 
-import { Court } from '../court';
-import { CourtService } from '../court.service';
+import { Court } from '../court/court';
+import { CourtService } from '../court/court.service';
 
 @Component({
   selector: 'app-score-entry',

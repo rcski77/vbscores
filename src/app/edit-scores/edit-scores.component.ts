@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { CourtService } from '../court.service';
-import { Court } from '../court';
+import { CourtService } from '../court/court.service';
+import { Court } from '../court/court';
 
 @Component({
   selector: 'app-edit-scores',
