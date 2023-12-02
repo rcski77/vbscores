@@ -23,9 +23,9 @@ export class EditScoresComponent {
     this.getCourt();
   }
 
-  getCourt(): void {
+  async getCourt(): Promise<void> {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    this.courtService.getCourt(id).subscribe((court) => (this.court = court));
+    (await this.courtService.getCourt(id)).subscribe((court) => (this.court = court));
   }
 
   goBack(): void {

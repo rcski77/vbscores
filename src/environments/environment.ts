@@ -6,6 +6,5 @@ export const environment = {
     apiKey: 'AIzaSyAiEpMfjn15D6XRw8MpLoldMTvR5H36qzk',
     authDomain: 'vbscores-6e6d1.firebaseapp.com',
     messagingSenderId: '751083793841',
-    databaseURL: "https://vbscores-6e6d1.firebase.io",
   },
 };
