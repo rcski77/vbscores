@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Court } from './court';
-import { Observable, of, filter, map } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Firestore, collection, collectionData, doc, getDoc } from '@angular/fire/firestore';
 
 @Injectable({

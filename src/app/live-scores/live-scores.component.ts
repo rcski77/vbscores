@@ -4,12 +4,12 @@ import { Court } from '../court/court';
 import { CourtService } from '../court/court.service';
 
 @Component({
-  selector: 'app-score-entry',
-  templateUrl: './score-entry.component.html',
-  styleUrls: ['./score-entry.component.css'],
+  selector: 'app-live-scores',
+  templateUrl: './live-scores.component.html',
+  styleUrls: ['./live-scores.component.css'],
 })
 
-export class ScoreEntryComponent {
+export class LiveScoresComponent {
   courts: Court[] = [];
 
   constructor(private courtService: CourtService) {}

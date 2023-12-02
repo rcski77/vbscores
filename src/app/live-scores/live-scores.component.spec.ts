@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScoreEntryComponent } from './score-entry.component';
+import { LiveScoresComponent } from './live-scores.component';
 
 describe('ScoreEntryComponent', () => {
-  let component: ScoreEntryComponent;
-  let fixture: ComponentFixture<ScoreEntryComponent>;
+  let component: LiveScoresComponent;
+  let fixture: ComponentFixture<LiveScoresComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScoreEntryComponent ]
+      declarations: [ LiveScoresComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ScoreEntryComponent);
+    fixture = TestBed.createComponent(LiveScoresComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
