@@ -11,7 +11,7 @@ import { Court } from '../court/court';
   styleUrls: ['./edit-scores.component.css'],
 })
 export class EditScoresComponent {
-  court: Court | undefined;
+  court$: Court | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +25,7 @@ export class EditScoresComponent {
 
   async getCourt(): Promise<void> {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    (await this.courtService.getCourt(id)).subscribe((court) => (this.court = court));
+    (await this.courtService.getCourt(id)).subscribe((court) => (this.court$ = court));
   }
 
   goBack(): void {
@@ -33,21 +33,21 @@ export class EditScoresComponent {
   }
 
   addScore(teamID: number): void {
-    if (this.court) {
+    if (this.court$) {
       if (teamID === 1) {
-        this.court.score1 = this.court.score1 + 1;
+        this.court$.score1 = this.court$.score1 + 1;
       } else {
-        this.court.score2 = this.court.score2 + 1;
+        this.court$.score2 = this.court$.score2 + 1;
       }
     }
   }
 
   decreaseScore(teamID: number): void {
-    if (this.court) {
+    if (this.court$) {
       if (teamID === 1) {
-        this.court.score1 = this.court.score1 - 1;
+        this.court$.score1 = this.court$.score1 - 1;
       } else {
-        this.court.score2 = this.court.score2 - 1;
+        this.court$.score2 = this.court$.score2 - 1;
       }
     }
   }
