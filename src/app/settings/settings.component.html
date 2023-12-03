@@ -1,0 +1,19 @@
+<h2>Scoreboard Setup</h2>
+
+<div *ngFor="let court of courts">
+  <div class="card" >
+    <div class="container">
+      <div class="court-name">Court {{ court.courtNum }}</div>
+      <div>{{ court.team1 }}</div>
+      <div>{{ court.team2 }}</div>
+    </div>
+    <div class="delete" (click)="delete(court.id)">
+      <mat-icon>delete</mat-icon>
+    </div>
+  </div>
+  
+</div>
+
+<div class="button-row">
+    <button (click)="addCourt()">Add/Update Court</button>
+</div>

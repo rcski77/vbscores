@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Add/Update Court</h1>
+<div mat-dialog-content>
+    <div class="form-input">
+        <label for="court">Court #: </label>
+        <input id="court" [(ngModel)]="court.courtNum">
+    </div>
+    <div class="form-input">
+        <label for="team1">Team 1: </label>
+        <input id="team1" [(ngModel)]="court.team1">
+    </div>
+    <div class="form-input">
+        <label for="team2">Team 2: </label>
+        <input id="team2" [(ngModel)]="court.team2">
+    </div>
+</div>
+<div class="actions" mat-dialog-actions>
+    <button mat-button (click)="submit()" [mat-dialog-close]="true">Submit</button>
+</div>

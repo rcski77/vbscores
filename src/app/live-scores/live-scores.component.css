@@ -4,26 +4,6 @@ a {
   color: black;
 }
 
-.bounce {
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    transform-origin: bottom;
-}
-
-.bounce:hover {
-  color: black;
-  animation-name: bounce;
-  animation-timing-function: ease;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.scoreboards {
+  align-items: center;
 }

@@ -1,15 +1,7 @@
 <h2>Live Scores</h2>
 
-<!-- <div *ngFor="let court of courts">
-    <div class="bounce">
-        <a routerLink="/view/{{court.id}}">
-            <app-scoreboard [court]="court"></app-scoreboard>
-        </a>
-    </div>
-</div> -->
-
 <div *ngFor="let court of courts">
-    <div class="bounce">
+    <div class="scoreboards">
         <app-scoreboard [court]="court"></app-scoreboard>
     </div>
 </div>
