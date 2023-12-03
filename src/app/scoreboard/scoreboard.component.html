@@ -1,23 +1,35 @@
 <div *ngIf="court">
-  <div class="scoreboard">
-    <table class="scoretable">
-      <tr class="scorerow">
-        <td class="teamname">{{ court.team1 }}</td>
-        <td class="score">{{ court.score1 }}</td>
-        <td class="sets">{{ court.sets1 }}</td>
-      </tr>
-      <tr class="scorerow">
-        <td class="teamname">{{ court.team2 }}</td>
-        <td class="score">{{ court.score2 }}</td>
-        <td class="sets">{{ court.sets2 }}</td>
-      </tr>
-    </table>
-    <div class="scorefooter-skew">
-      <div class="scorefooter">
-        <div id="footer-court">
-          Court {{ court.courtNum }}
+  <div *ngIf="selector === false">
+    <div class="scoreboard" (click)="changeSelector()">
+      <table class="scoretable">
+        <tr class="scorerow">
+          <td class="teamname">{{ court.team1 }}</td>
+          <td class="score">{{ court.score1 }}</td>
+          <td class="sets">{{ court.sets1 }}</td>
+        </tr>
+        <tr class="scorerow">
+          <td class="teamname">{{ court.team2 }}</td>
+          <td class="score">{{ court.score2 }}</td>
+          <td class="sets">{{ court.sets2 }}</td>
+        </tr>
+      </table>
+      <div class="scorefooter-skew">
+        <div class="scorefooter">
+          <div id="footer-court">Court {{ court.courtNum }}</div>
         </div>
       </div>
     </div>
   </div>
+  <div *ngIf="selector === true">
+    <div class="scoreboard">
+      <table class="scoretable">
+        <tr class="selector-row">
+          <td class="selector"><a routerLink="/court/{{court.id}}"><div class="selector-text">Edit</div></a></td>
+          <td class="selector"><a routerLink="/view/{{court.id}}"><div class="selector-text">View</div></a></td>
+          <td class="return" (click)="changeSelector()"><div class="selector-text"><mat-icon>keyboard_return</mat-icon></div></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
+

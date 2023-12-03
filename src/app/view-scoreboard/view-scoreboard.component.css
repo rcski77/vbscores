@@ -1,0 +1,74 @@
+.scoreboard-container {
+    display: flex;
+    width: 100%;
+}
+
+.scoreboard {
+    margin: 0 0 2em 0;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 3px;
+    width: 100%;
+}
+
+.scoretable {
+    margin: 0;
+    padding: 3px;
+    padding-bottom: 0;
+    width: 600px;
+    height: 190px;
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+.scorerow {
+    height: 35px;
+}
+
+.teamname {
+    background-color: azure;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.score {
+    background-color: gold;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.sets {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+}
+
+.scorefooter-skew {
+    margin-left: 290px;
+    height: 32px;
+    width: 300px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: darkgray;
+    transform: skewX(20deg);
+    border-radius: 3px;
+}
+
+.scorefooter {
+    margin-left: 20px;
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: italic;
+    transform: skewX(-20deg);
+}
+
+#footer-court {
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 2px;
+}

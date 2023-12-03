@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
 import { CourtService } from '../court/court.service';
 import { Court } from '../court/court';
@@ -16,7 +15,6 @@ export class EditScoresComponent {
   constructor(
     private route: ActivatedRoute,
     private courtService: CourtService,
-    private location: Location
   ) {}
 
   ngOnInit(): void {
