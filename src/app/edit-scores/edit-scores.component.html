@@ -14,7 +14,7 @@
         </tr>
         <tr class="labels">
           <td>Sets</td>
-          <td><button (click)="decreaseScore(1)"><mat-icon>remove</mat-icon></button></td>
+          <td><button (click)="decreaseScore('score1')"><mat-icon>remove</mat-icon></button></td>
         </tr>
       </table>
       <table class="scoretable">
@@ -26,7 +26,7 @@
           <td class="sets">{{ court$.sets2 }}</td>
         </tr>
         <tr class="labels">
-          <td><button (click)="decreaseScore(2)"><mat-icon>remove</mat-icon></button></td>
+          <td><button (click)="decreaseScore('score2')"><mat-icon>remove</mat-icon></button></td>
           <td>Sets</td>
         </tr>
       </table>
