@@ -1,0 +1,14 @@
+.form-input {
+    margin: 3px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    align-self: center;
+    margin: auto;
+}
