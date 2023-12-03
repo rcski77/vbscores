@@ -29,7 +29,7 @@ export class CourtService {
       );
   }
 
-  updateValue(id: string, key: string, value: string | number): void {
+  updateValue(id: string, key: string, value: number): void {
     const docRef = doc(this.courtsCollection, id);
     updateDoc(docRef, {
       [key]: [value],
