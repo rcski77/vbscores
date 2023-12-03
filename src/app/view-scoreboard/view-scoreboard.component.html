@@ -1,0 +1,23 @@
+<div *ngIf="court$">
+  <div class="scoreboard-container">
+    <div class="scoreboard">
+      <table class="scoretable">
+        <tr class="scorerow">
+          <td class="teamname">{{ court$.team1 }}</td>
+          <td class="score">{{ court$.score1 }}</td>
+          <td class="sets">{{ court$.sets1 }}</td>
+        </tr>
+        <tr class="scorerow">
+          <td class="teamname">{{ court$.team2 }}</td>
+          <td class="score">{{ court$.score2 }}</td>
+          <td class="sets">{{ court$.sets2 }}</td>
+        </tr>
+      </table>
+      <div class="scorefooter-skew">
+        <div class="scorefooter">
+          <div id="footer-court">Court {{ court$.courtNum }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
