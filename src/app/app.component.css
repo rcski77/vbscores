@@ -2,6 +2,7 @@
   color: white !important ;
   margin-left: 15px;
   margin-top: 15px;
+  width: 110px;
 }
 
 .spacer {
@@ -14,11 +15,18 @@
   left: 0;
   right: 0;
   height: 60px;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #7c588a;
   color: white;
   font-weight: 600;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .content {

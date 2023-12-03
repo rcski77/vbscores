@@ -1,12 +1,17 @@
 <div class="toolbar">
   <div>
-    <h1 class="title">{{ title }} | </h1>
+    <h1 class="title">{{ title }} |</h1>
   </div>
-  <nav>
-    <a routerLink="/home">Home</a>
-  </nav>
+  <div class="pages">
+    <nav>
+      <a routerLink="/home">Home</a>
+    </nav>
+    <nav>
+      <a routerLink="/settings"><mat-icon>settings</mat-icon></a>
+    </nav>
+  </div>
 </div>
 
-<div class ="content">
+<div class="content">
   <router-outlet></router-outlet>
 </div>

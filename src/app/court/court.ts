@@ -1,5 +1,5 @@
 export interface Court {
-  id: string;
+  id?: string;
   courtNum: number;
   team1: string;
   team2: string;
