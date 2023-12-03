@@ -8,7 +8,7 @@
         </tr>
         <tr class="scorerow">
           <td class="sets">{{ court$.sets1 }}</td>
-          <td class="score" (click)="addScore(1)">
+          <td class="score" (click)="addScore('score1')">
             {{ court$.score1 }}
           </td>
         </tr>
@@ -22,7 +22,7 @@
           <td class="teamname" colSpan="2">{{ court$.team2 }}</td>
         </tr>
         <tr class="scorerow">
-          <td class="score" (click)="addScore(2)">{{ court$.score2 }}</td>
+          <td class="score" (click)="addScore('score2')">{{ court$.score2 }}</td>
           <td class="sets">{{ court$.sets2 }}</td>
         </tr>
         <tr class="labels">

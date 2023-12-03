@@ -23,23 +23,19 @@ export class EditScoresComponent {
     this.getCourt();
   }
 
-  async getCourt(): Promise<void> {
+  getCourt(): void {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    (await this.courtService.getCourt(id)).subscribe((court) => (this.court$ = court));
+    this.courtService.getCourt(id).subscribe((court) => (this.court$ = court));
   }
 
-  goBack(): void {
-    this.location.back();
-  }
-
-  addScore(teamID: number): void {
-    if (this.court$) {
-      if (teamID === 1) {
-        this.court$.score1 = this.court$.score1 + 1;
-      } else {
-        this.court$.score2 = this.court$.score2 + 1;
-      }
+  addScore(teamScore: string): void {
+    let score= 0;
+    if (teamScore === 'score1'){
+      score = Number(this.court$?.score1);
+    } else {
+      score = Number(this.court$?.score2);
     }
+    this.courtService.updateValue(String(this.route.snapshot.paramMap.get('id')), teamScore, score + 1);
   }
 
   decreaseScore(teamID: number): void {
