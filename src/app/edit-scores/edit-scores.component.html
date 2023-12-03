@@ -1,32 +1,32 @@
-<div *ngIf="court">
+<div *ngIf="court$">
   <div class="edit-scoreboard">
-    <div id="court-number">Court {{ court.courtNum }}</div>
+    <div id="court-number">Court {{ court$.courtNum }}</div>
     <div class="edit-scoreboard-teams">
       <table class="scoretable">
         <tr class="namerow">
-          <td class="teamname" colspan="2">{{ court.team1 }}</td>
+          <td class="teamname" colspan="2">{{ court$.team1 }}</td>
         </tr>
         <tr class="scorerow">
-          <td class="sets">{{ court.sets1 }}</td>
-          <td class="score" (click)="addScore(1)">
-            {{ court.score1 }}
+          <td class="sets">{{ court$.sets1 }}</td>
+          <td class="score" (click)="addScore('score1')">
+            {{ court$.score1 }}
           </td>
         </tr>
         <tr class="labels">
           <td>Sets</td>
-          <td><button (click)="decreaseScore(1)"><mat-icon>remove</mat-icon></button></td>
+          <td><button (click)="decreaseScore('score1')"><mat-icon>remove</mat-icon></button></td>
         </tr>
       </table>
       <table class="scoretable">
         <tr class="namerow">
-          <td class="teamname" colSpan="2">{{ court.team2 }}</td>
+          <td class="teamname" colSpan="2">{{ court$.team2 }}</td>
         </tr>
         <tr class="scorerow">
-          <td class="score" (click)="addScore(2)">{{ court.score2 }}</td>
-          <td class="sets">{{ court.sets2 }}</td>
+          <td class="score" (click)="addScore('score2')">{{ court$.score2 }}</td>
+          <td class="sets">{{ court$.sets2 }}</td>
         </tr>
         <tr class="labels">
-          <td><button (click)="decreaseScore(2)"><mat-icon>remove</mat-icon></button></td>
+          <td><button (click)="decreaseScore('score2')"><mat-icon>remove</mat-icon></button></td>
           <td>Sets</td>
         </tr>
       </table>

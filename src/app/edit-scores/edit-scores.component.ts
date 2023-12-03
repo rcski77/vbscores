@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { CourtService } from '../court.service';
-import { Court } from '../court';
+import { CourtService } from '../court/court.service';
+import { Court } from '../court/court';
 
 @Component({
   selector: 'app-edit-scores',
@@ -11,7 +11,7 @@ import { Court } from '../court';
   styleUrls: ['./edit-scores.component.css'],
 })
 export class EditScoresComponent {
-  court: Court | undefined;
+  court$: Court | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,30 +25,26 @@ export class EditScoresComponent {
 
   getCourt(): void {
     const id = String(this.route.snapshot.paramMap.get('id'));
-    this.courtService.getCourt(id).subscribe((court) => (this.court = court));
+    this.courtService.getCourt(id).subscribe((court) => (this.court$ = court));
   }
 
-  goBack(): void {
-    this.location.back();
-  }
-
-  addScore(teamID: number): void {
-    if (this.court) {
-      if (teamID === 1) {
-        this.court.score1 = this.court.score1 + 1;
-      } else {
-        this.court.score2 = this.court.score2 + 1;
-      }
+  addScore(teamScore: string): void {
+    let score= 0;
+    if (teamScore === 'score1'){
+      score = Number(this.court$?.score1);
+    } else {
+      score = Number(this.court$?.score2);
     }
+    this.courtService.updateValue(String(this.route.snapshot.paramMap.get('id')), teamScore, score + 1);
   }
 
-  decreaseScore(teamID: number): void {
-    if (this.court) {
-      if (teamID === 1) {
-        this.court.score1 = this.court.score1 - 1;
-      } else {
-        this.court.score2 = this.court.score2 - 1;
-      }
+  decreaseScore(teamScore: string): void {
+    let score= 0;
+    if (teamScore === 'score1'){
+      score = Number(this.court$?.score1);
+    } else {
+      score = Number(this.court$?.score2);
     }
+    this.courtService.updateValue(String(this.route.snapshot.paramMap.get('id')), teamScore, score - 1);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Court } from '../court';
+import { Court } from '../court/court';
 import { NgIf } from '@angular/common';
 
 @Component({
